@@ -1,6 +1,4 @@
 from django.contrib.auth.models import User
-from django.db.models import fields
-from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 
 from movies.models import Genre, Movie, Criticism, Comment

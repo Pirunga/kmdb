@@ -1,5 +1,4 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import serializers
 from rest_framework.response import Response
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.generics import (
@@ -8,14 +7,11 @@ from rest_framework.generics import (
     RetrieveDestroyAPIView,
     UpdateAPIView,
 )
-from rest_framework.serializers import Serializer
 from rest_framework import status
-from rest_framework.views import APIView
 from movies.models import Comment, Criticism, Movie
 from movies.serializers import CommentSerializer, CriticismSeriliazer, MovieSerializer
 from movies.permissions import AdminPermission, CriticPermission, UserPermission
 from movies.mixins import FieldLookUpMixin
-import ipdb
 
 
 class ListCreateMovies(FieldLookUpMixin, ListCreateAPIView):
